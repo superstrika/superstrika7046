@@ -1,0 +1,12 @@
+[0.000000] (-) TimerEvent: {}
+[0.001938] (my_robot_package) JobQueued: {'identifier': 'my_robot_package', 'dependencies': OrderedDict()}
+[0.002065] (my_robot_package) JobStarted: {'identifier': 'my_robot_package'}
+[0.099258] (-) TimerEvent: {}
+[0.200032] (-) TimerEvent: {}
+[0.300805] (-) TimerEvent: {}
+[0.401703] (-) TimerEvent: {}
+[0.502495] (-) TimerEvent: {}
+[0.603214] (-) TimerEvent: {}
+[0.704009] (-) TimerEvent: {}
+[0.723059] (my_robot_package) JobEnded: {'identifier': 'my_robot_package', 'rc': 0}
+[0.726437] (-) EventReactorShutdown: {}
