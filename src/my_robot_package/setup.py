@@ -14,7 +14,8 @@ setup(
     license='MIT',
     entry_points={
         'console_scripts': [
-            'test1 = my_robot_package.ultra_screen:main',
+            'test1 = my_robot_package.pot_screen:main',
+            'test2 = my_robot_package.ultra_screen:main'
         ],
     },
 )

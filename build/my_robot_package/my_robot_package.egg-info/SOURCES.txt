@@ -2,6 +2,7 @@ setup.cfg
 setup.py
 my_robot_package/__init__.py
 my_robot_package/button_listener.py
+my_robot_package/pot_screen.py
 my_robot_package/real_button_node.py
 my_robot_package/test.py
 my_robot_package/test1.py
