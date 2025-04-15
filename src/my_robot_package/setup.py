@@ -14,8 +14,7 @@ setup(
     license='MIT',
     entry_points={
         'console_scripts': [
-            'real_button_node = my_robot_package.real_button_node:main',
-            'button_listener = my_robot_package.button_listener:main',
+            'test1 = my_robot_package.ultra_screen:main',
         ],
     },
 )

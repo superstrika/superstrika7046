@@ -1,4 +1,3 @@
 [console_scripts]
-button_listener = my_robot_package.button_listener:main
-real_button_node = my_robot_package.real_button_node:main
+test1 = my_robot_package.ultra_screen:main
 

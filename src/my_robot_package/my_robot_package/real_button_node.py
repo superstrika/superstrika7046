@@ -17,7 +17,7 @@ class RealButtonPublisher(Node):
         GPIO.setmode(GPIO.BCM)
         GPIO.setup(BUTTON_PIN, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
-        self.get_logger().info("🟢 Button node started (manual polling)")
+        self.get_logger().info("(🟢 Button node started (manual polling)")
         threading.Thread(target=self.poll_button_loop, daemon=True).start()
 
     def poll_button_loop(self):

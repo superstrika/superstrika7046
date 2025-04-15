@@ -1,0 +1,16 @@
+[1.823s] Invoking command in '/ros2/first_app/build/my_robot_package': PYTHONPATH=/ros2/first_app/build/my_robot_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/ros2/first_app/install/my_robot_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /ros2/first_app/build/my_robot_package/build --no-deps
+[2.570s] running develop
+[2.880s] running egg_info
+[2.881s] writing my_robot_package.egg-info/PKG-INFO
+[2.882s] writing dependency_links to my_robot_package.egg-info/dependency_links.txt
+[2.885s] writing entry points to my_robot_package.egg-info/entry_points.txt
+[2.886s] writing requirements to my_robot_package.egg-info/requires.txt
+[2.887s] writing top-level names to my_robot_package.egg-info/top_level.txt
+[2.893s] reading manifest file 'my_robot_package.egg-info/SOURCES.txt'
+[2.896s] writing manifest file 'my_robot_package.egg-info/SOURCES.txt'
+[2.901s] running build_ext
+[2.902s] Creating /ros2/first_app/install/my_robot_package/lib/python3.10/site-packages/my-robot-package.egg-link (link to .)
+[2.906s] Installing test1 script to /ros2/first_app/install/my_robot_package/lib/my_robot_package
+[2.908s] 
+[2.909s] Installed /ros2/first_app/build/my_robot_package
+[3.029s] Invoked command in '/ros2/first_app/build/my_robot_package' returned '0': PYTHONPATH=/ros2/first_app/build/my_robot_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/ros2/first_app/install/my_robot_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /ros2/first_app/build/my_robot_package/build --no-deps
