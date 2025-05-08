@@ -26,11 +26,6 @@ class Pot_screen(Node):
 
         self.screen = self.create_subscription(String, "Pot", self.print_pot, 10)
         
-        """
-        self.publisher = self.create_publisher(<TYPE>, <TOPIC_NAME>, 10)
-        self.timer = self.create_timer(<delay>, <function>)
-        self.subscriber = self.create_subcription(<TYPE>, <TOPIC_NAME>, <function>, 10)
-        """
     
     def check_pot(self):
        URL = "http://192.168.87.23/pot"
