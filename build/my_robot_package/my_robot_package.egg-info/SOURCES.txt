@@ -1,6 +1,5 @@
 setup.cfg
 setup.py
-my_robot_package/Neopixel.py
 my_robot_package.egg-info/PKG-INFO
 my_robot_package.egg-info/SOURCES.txt
 my_robot_package.egg-info/dependency_links.txt

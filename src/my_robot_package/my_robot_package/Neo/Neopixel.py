@@ -7,11 +7,11 @@ from std_srvs.srv import SetBool
 from rpi_ws281x import PixelStrip, Color
 
 # NeoPixel configuration:
-LED_COUNT = 1       # Number of NeoPixels in the strip
+LED_COUNT = 12       # Number of NeoPixels in the strip
 LED_PIN = 18        # GPIO pin connected to the NeoPixels (must support PWM)
 LED_FREQ_HZ = 800000  # LED signal frequency in hertz (usually 800kHz)
 LED_DMA = 10        # DMA channel to use for generating signal (try 10)
-LED_BRIGHTNESS = 255  # Set brightness level (0-255)
+LED_BRIGHTNESS = 100  # Set brightness level (0-255)
 LED_INVERT = False    # True to invert signal logic
 LED_CHANNEL = 0       # set to '1' for GPIOs 13, 19, 41, 45 or 53
 

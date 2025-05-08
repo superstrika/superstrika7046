@@ -14,7 +14,7 @@ setup(
     license='MIT',
     entry_points={
         'console_scripts': [
-            'test1 = my_robot_package.Neopixel.py',
+            'test1 = my_robot_package.Neo.Neopixel:main',
             'test2 = my_robot_package.ultra_screen:main'
         ],
     },
