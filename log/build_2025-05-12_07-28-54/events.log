@@ -1,0 +1,16 @@
+[0.000000] (-) TimerEvent: {}
+[0.001810] (my_robot_package) JobQueued: {'identifier': 'my_robot_package', 'dependencies': OrderedDict()}
+[0.002451] (my_robot_package) JobStarted: {'identifier': 'my_robot_package'}
+[0.099134] (-) TimerEvent: {}
+[0.199750] (-) TimerEvent: {}
+[0.300639] (-) TimerEvent: {}
+[0.401371] (-) TimerEvent: {}
+[0.502531] (-) TimerEvent: {}
+[0.603464] (-) TimerEvent: {}
+[0.704112] (-) TimerEvent: {}
+[0.804836] (-) TimerEvent: {}
+[0.905675] (-) TimerEvent: {}
+[1.006511] (-) TimerEvent: {}
+[1.061083] (my_robot_package) StderrLine: {'line': b'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/colcon_parallel_executor/executor/parallel.py", line 75, in execute\n    loop.run_until_complete(future)\n  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete\n    self.run_forever()\n  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever\n    self._run_once()\n  File "/usr/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once\n    event_list = self._selector.select(timeout)\n  File "/usr/lib/python3.10/selectors.py", line 469, in select\n    fd_event_list = self._selector.poll(timeout, max_ev)\nKeyboardInterrupt\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__\n    rc = await self.task(*args, **kwargs)\n  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__\n    return await task_method(*args, **kwargs)\n  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_python/build.py", line 102, in build\n    return await extension.build(additional_hooks=additional_hooks)\n  File "/usr/lib/python3/dist-packages/colcon_core/task/python/build.py", line 96, in build\n    available_commands = await self._get_available_commands(\n  File "/usr/lib/python3/dist-packages/colcon_core/task/python/build.py", line 194, in _get_available_commands\n    output = await check_output(\n  File "/usr/lib/python3/dist-packages/colcon_core/subprocess.py", line 129, in check_output\n    assert not rc, f\'Expected {args} to pass: {stderr_data}\'\nAssertionError: Expected [\'/usr/bin/python3\', \'-W\', \'ignore:setup.py install is deprecated\', \'-W\', \'ignore:easy_install command is deprecated\', \'setup.py\', \'--help-commands\'] to pass: Traceback (most recent call last):\n  File "/ros2/first_app/src/my_robot_package/setup.py", line 1, in <module>\n    from setuptools import setup\n  File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 14, in <module>\n    from ._deprecation_warning import SetuptoolsDeprecationWarning\n  File "/usr/lib/python3/dist-packages/setuptools/_deprecation_warning.py", line 1, in <module>\n    class SetuptoolsDeprecationWarning(Warning):\nKeyboardInterrupt\n\n'}
+[1.062814] (my_robot_package) JobEnded: {'identifier': 'my_robot_package', 'rc': 'SIGINT'}
+[1.072511] (-) EventReactorShutdown: {}
