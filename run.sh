@@ -13,4 +13,4 @@ echo "✅ Build complete. Sourcing the environment..."
 source install/setup.bash
 
 echo "🚀 Running real_button_node..."
-ros2 run my_robot_package test1
+ros2 run my_robot_package test3

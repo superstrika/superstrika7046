@@ -40,16 +40,7 @@ class NeoPixelNode(Node):
         self.update_neopixel()
         self.get_logger().info('NeoPixel node started')
 
-    def color_callback(self, msg):
-        if self.is_on:
-            red = int(msg.r * 255)
-            green = int(msg.g * 255)
-            blue = int(msg.b * 255)
-            self.current_color = Color(red, green, blue)
-            self.update_neopixel()
-            self.get_logger().info(f'Received color: R={red}, G={green}, B={blue}')
-        else:
-            self.get_logger().warn('Received color but NeoPixel is off')
+
 
     def on_off_callback(self, request, response):
         self.is_on = request.data
@@ -62,7 +53,7 @@ class NeoPixelNode(Node):
     def update_neopixel(self):
         if self.is_on:
             for i in range(self.strip.numPixels()):
-                self.strip.setPixelColor(i, self.current_color)
+                self.strip.setPixelColor(i, )
             self.strip.show()
         else:
             for i in range(self.strip.numPixels()):
