@@ -1,0 +1,18 @@
+running develop
+running egg_info
+writing my_robot_package.egg-info/PKG-INFO
+writing dependency_links to my_robot_package.egg-info/dependency_links.txt
+writing entry points to my_robot_package.egg-info/entry_points.txt
+writing requirements to my_robot_package.egg-info/requires.txt
+writing top-level names to my_robot_package.egg-info/top_level.txt
+reading manifest file 'my_robot_package.egg-info/SOURCES.txt'
+writing manifest file 'my_robot_package.egg-info/SOURCES.txt'
+running build_ext
+Creating /ros2/first_app/install/my_robot_package/lib/python3.10/site-packages/my-robot-package.egg-link (link to .)
+Installing motor_controller script to /ros2/first_app/install/my_robot_package/lib/my_robot_package
+Installing test1 script to /ros2/first_app/install/my_robot_package/lib/my_robot_package
+
+Installed /ros2/first_app/build/my_robot_package
+running symlink_data
+creating /ros2/first_app/install/my_robot_package/share/my_robot_package/launch
+symbolically linking /ros2/first_app/build/my_robot_package/my_robot_package/launch/motors.launch.py -> /ros2/first_app/install/my_robot_package/share/my_robot_package/launch

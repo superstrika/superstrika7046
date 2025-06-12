@@ -1,5 +1,7 @@
+package.xml
 setup.cfg
 setup.py
+my_robot_package/motor_controller.py
 my_robot_package.egg-info/PKG-INFO
 my_robot_package.egg-info/SOURCES.txt
 my_robot_package.egg-info/dependency_links.txt
@@ -7,3 +9,5 @@ my_robot_package.egg-info/entry_points.txt
 my_robot_package.egg-info/requires.txt
 my_robot_package.egg-info/top_level.txt
 my_robot_package.egg-info/zip-safe
+my_robot_package/launch/motors.launch.py
+resource/my_robot_package
