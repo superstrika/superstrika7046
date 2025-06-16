@@ -128,7 +128,13 @@ class MotorNode(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    motor_node = MotorNode()
+    motorPins = [
+        (2, 3),
+        (17, 27),
+        (14, 15),
+        (23, 24)
+    ]
+    motor_node = MotorNode(motorPins)
     
     try:
         rclpy.spin(motor_node)
