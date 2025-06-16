@@ -123,8 +123,8 @@ class MotorNode(Node):
     
     def calculate_speed(self, angle, magnitude, rotation):
         # Calculate the speed of the motor
-        vx = magnitude * math.cos(math.radians(angle))
-        vy = magnitude * math.sin(math.radians(angle))
+        vx = magnitude * math.cos(math.radians(angle - 45))
+        vy = magnitude * math.sin(math.radians(angle - 45))
         wheel1_speed = vy + rotation
         wheel2_speed = vx - rotation
         wheel3_speed = vx + rotation
