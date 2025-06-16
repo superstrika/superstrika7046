@@ -122,8 +122,8 @@ class MotorNode(Node):
     
     def __del__(self):
         # Cleanup GPIO on shutdown
-        self.pwm1_1.stop()
-        self.pwm1_2.stop()
+        for currentMotor in self.motors:
+            currentMotor.stopMotor()
         GPIO.cleanup()
 
 def main(args=None):
