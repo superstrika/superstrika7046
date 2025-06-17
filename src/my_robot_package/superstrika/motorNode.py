@@ -78,6 +78,29 @@ class MotorsNode(Node):
 
         return [wheel1_speed*100, wheel2_speed*100, wheel3_speed*100, wheel4_speed*100]
     
+    def printSpeed(self, msg):
+        # ANSI escape codes for colors and style
+        RED = "\033[91m"
+        GREEN = "\033[92m"
+        CYAN = "\033[96m"
+        YELLOW = "\033[93m"
+        RESET = "\033[0m"
+        BOLD = "\033[1m"
+
+        print(f"""
+    {BOLD}{CYAN}         WHEEL SPEEDS{RESET}
+        {YELLOW}┌───────────────────┐{RESET}
+        {YELLOW}│{RESET}  [1]         [2]  {YELLOW}│{RESET}
+        {YELLOW}│{RESET} ({GREEN}{msg.data[0]:03}{RESET})       ({GREEN}{msg.data[1]:03}{RESET}) {YELLOW}│{RESET}
+        {YELLOW}│{RESET}    \\       /      {YELLOW}│{RESET}
+        {YELLOW}│{RESET}     \\     /       {YELLOW}│{RESET}
+        {YELLOW}│{RESET}     /     \\       {YELLOW}│         {RESET}
+        {YELLOW}│{RESET}    /       \\      {YELLOW}│{RESET}
+        {YELLOW}│{RESET} ({GREEN}{msg.data[3]:03}{RESET})       ({GREEN}{msg.data[2]:03}{RESET}) {YELLOW}│{RESET}
+        {YELLOW}│{RESET}  [4]         [3]  {YELLOW}│{RESET}
+        {YELLOW}└───────────────────┘{RESET}
+    """)
+
     def __del__(self):
         # Cleanup GPIO on shutdown
         for currentMotor in self.motors:
@@ -104,3 +127,4 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+    

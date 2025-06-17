@@ -63,6 +63,30 @@ The system uses the following formulas for vector-based movement:
   - Wheel 3: vx + rotation
   - Wheel 4: vy - rotation
 
+## Visual Speed Display
+
+The system includes a visual display of motor speeds using ASCII art and ANSI colors. The `printSpeed` function creates a wheel layout display showing the current speed of each motor:
+
+```
+         WHEEL SPEEDS
+        ┌───────────────────┐
+        │  [1]         [2]  │
+        │ (050)       (050) │
+        │    \       /      │
+        │     \     /       │
+        │     /     \       │         
+        │    /       \      │
+        │ (050)       (050) │
+        │  [4]         [3]  │
+        └───────────────────┘
+```
+
+The display features:
+- Color-coded speed values (green)
+- Wheel numbers in brackets
+- Visual representation of wheel positions
+- Real-time updates of motor speeds
+
 ## Installation
 
 1. Ensure you have ROS 2 installed on your Raspberry Pi
