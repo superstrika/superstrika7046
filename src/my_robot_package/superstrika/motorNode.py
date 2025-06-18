@@ -36,13 +36,13 @@ class MotorsNode(Node):
             Float32MultiArray,
             'motorSpeed',
             self.motorSpeedCallback,
-            12
+            11
         )
 
         self.speedPublisher = self.create_publisher(
             Float32MultiArray,
             'motorSpeed',
-            12
+            11
         )
 
     def speedToPWM(self, speed):
