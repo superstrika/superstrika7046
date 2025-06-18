@@ -115,3 +115,72 @@ ros2 run my_robot_package motors
 This project is maintained by:
 - [Noam Ron](https://github.com/NoamRon1)
 - [Itamar Hoter Ishay](https://github.com/ItamarHoter)
+
+## Servo Motor Control
+
+The system includes servo motor control capabilities through the `servoNode.py` and `servo.py` files.
+
+### Hardware Requirements
+- Servo motor connected to a GPIO pin
+- Raspberry Pi GPIO access
+
+### ROS 2 Topics
+
+#### Subscribed Topics
+- `servoAngle` (Float32): Servo motor angle control
+  - Value represents the desired angle for the servo motor
+
+### Usage
+
+To control the servo motor, publish to the `servoAngle` topic:
+```python
+# Example: Set servo to 90 degrees
+angle_msg = Float32()
+angle_msg.data = 90.0
+```
+
+## LCD Screen Display
+
+The system includes an LCD screen display functionality through the `screenNode.py` file.
+
+### Hardware Requirements
+- I2C LCD screen (PCF8574)
+- Raspberry Pi with I2C enabled
+
+### ROS 2 Topics
+
+#### Subscribed Topics
+- `printScreen` (StringMultiArray): LCD screen content control
+  - Array of strings representing lines to display on the LCD screen
+
+### Usage
+
+To display content on the LCD screen, publish to the `printScreen` topic:
+```python
+# Example: Display two lines of text
+screen_msg = StringMultiArray()
+screen_msg.data = ["Line 1", "Line 2"]
+```
+
+### LCD Screen Configuration
+- Default I2C address: 0x27
+- Default size: 20x4 characters
+- Supports auto line breaks
+- Backlight enabled by default
+
+## Running Additional Nodes
+
+To start the servo control node:
+```bash
+ros2 run my_robot_package servo
+```
+
+To start the LCD screen node:
+```bash
+ros2 run my_robot_package screen
+```
+
+## Additional Dependencies
+
+- RPLCD (for LCD screen control)
+- I2C tools (for LCD screen communication)
