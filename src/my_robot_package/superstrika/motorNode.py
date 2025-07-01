@@ -3,7 +3,6 @@
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float32MultiArray
-import RPi.GPIO as GPIO
 import time
 import math
 from motor import Motor
@@ -11,7 +10,6 @@ from motor import Motor
 class MotorsNode(Node):
     def __init__(self, enablePins: list[tuple[int, int]]):
         super().__init__('motors')
-        GPIO.setmode(GPIO.BCM)
         self.PWM_RANGE = 1024
 
         #motor setup:
@@ -102,10 +100,8 @@ class MotorsNode(Node):
     """)
 
     def __del__(self):
-        # Cleanup GPIO on shutdown
         for currentMotor in self.motors:
             currentMotor.stopMotor()
-        GPIO.cleanup()
 
 def main(args=None):
     rclpy.init(args=args)

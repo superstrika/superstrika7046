@@ -1,13 +1,11 @@
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float32
-import RPi.GPIO as GPIO
 from servo import ServoMotor
 
 class ScreenNode(Node):
     def __init__(self, servoPin, freq=50):
         super().__init__("screen")
-        GPIO.setmode(GPIO.BCM)
         self.DEFAULT_ANGLE = 0
         
         self.motor = ServoMotor(servoPin, freq)
@@ -27,7 +25,6 @@ class ScreenNode(Node):
     
     def __del__(self):
         self.motor.setMotorAngle(self.DEFAULT_ANGLE)
-        GPIO.cleanup()        
 
 def main(args=None):
     rclpy.init(args=args)

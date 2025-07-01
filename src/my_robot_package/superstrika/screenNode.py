@@ -1,13 +1,11 @@
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import StringMultiArray
-import RPi.GPIO as GPIO
 from RPLCD.i2c import CharLCD
 
 class ScreenNode(Node):
     def __init__(self, address, size: tuple):
         super().__init__("screen")
-        GPIO.setmode(GPIO.BCM)
         self.size: tuple = size
 
         self.screenSubscription = self.create_subscription(
@@ -37,7 +35,6 @@ class ScreenNode(Node):
     
     def __del__(self):
         self.screen.clear()
-        GPIO.cleanup()
 
 def main(args=None):
     rclpy.init(args=args)

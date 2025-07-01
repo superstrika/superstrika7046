@@ -1,20 +1,17 @@
-import RPi.GPIO as GPIO
+from gpiozero import PWMLED
 from time import sleep
 
 class ServoMotor:
-    def __init__(self, servoPin, frequency=50):
-        self.servoPin = servoPin
+    def __init__(self, servoPin):
+        self.PWM_RANGE = 1024
 
-        GPIO.setmode(GPIO.BCM)
-        GPIO.setup(servoPin, GPIO.OUT)
-
-        self.motor = GPIO.PWM(servoPin, frequency)
-        self.motor.start(0)        
+        self.servo = PWMLED(servoPin)
+        self.servo.value = 0
     
     def setMotorAngle(self, angle):
-        duty = 2 + (angle / 18)
-        GPIO.output(self.servoPin, True)
-        self.motor.ChangeDutyCycle(duty)
+        self.servo.value = (2 + (angle / 18)) / self.PWM_RANGE
         sleep(0.5)
-        GPIO.output(self.servoPin, False)
-        self.motor.ChangeDutyCycle(0)
+        self.servo.value = 0
+
+    def stopMotor(self):
+        self.servo.value = 0
