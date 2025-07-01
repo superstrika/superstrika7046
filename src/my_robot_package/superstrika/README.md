@@ -49,6 +49,30 @@ This package provides ROS 2 nodes for controlling a 4-wheel omnidirectional robo
 
 ## Usage
 
+### Quick Topic Publish Commands
+
+Publish direct motor speeds:
+```bash
+ros2 topic pub /motorSpeed std_msgs/Float32MultiArray '{data: [50.0, 50.0, 50.0, 50.0]}'
+```
+
+Publish vector movement:
+```bash
+ros2 topic pub /vectorMovement std_msgs/Float32MultiArray '{data: [45.0, 0.5, 0.0]}'
+```
+
+Publish servo angle:
+```bash
+ros2 topic pub /servoAngle std_msgs/Float32 '{data: 90.0}'
+```
+
+Publish LCD screen lines:
+```bash
+ros2 topic pub /printScreen std_msgs/StringMultiArray '{data: ["Line 1", "Line 2"]}'
+```
+
+---
+
 ### Direct Motor Control
 To control motors directly, publish to the `motorSpeed` topic with an array of 4 values:
 ```python
