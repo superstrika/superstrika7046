@@ -22,7 +22,7 @@ setup(
     license='MIT',
     entry_points={
         'console_scripts': [
-            'test1 = my_robot_package.general.motors:main'
+            'servo = my_robot_package.superstrika.servoNode:main'
         ],
     },
 )
